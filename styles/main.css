@@ -1,0 +1,435 @@
+body{
+	width: 100%;
+	position: relative;
+}
+
+.mobile-header{
+	background-color: #FFFFFF;
+	  position: fixed;
+    width: 100%;
+    z-index: 10;
+    height: 20%;
+}
+
+
+.search input[type="text"]{
+	border-radius: 5px 0px 0px 5px;
+	border: 1px solid #DDDDDD;
+	padding: 5px;
+	width: 86%;
+	
+}
+
+.search label{
+	display: none;
+}
+
+.search input[type="button"]{
+	width: 35px;
+	height: 32px;
+	text-indent: 99999999px;
+	overflow: hidden;
+	background: #0D7EB8;
+	background-position: center -58px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAEKCAYAAAAfPAUVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4BpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpENDJDQjNFNzYyNjcxMUU1OTRBM0Y2QkQxNEQ5MzQwMCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0NDc0MDQwQjY0OEYxMUU1Qjc2QzlFNTk4RjJFNTYyMyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0NDc0MDQwQTY0OEYxMUU1Qjc2QzlFNTk4RjJFNTYyMyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpkODg5ZWY4ZC1mMTEwLTNjNDctOTFmMS1kMDljMDgyMjg2NzIiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpkYTdkNGMzNi02NDhlLTExZTUtODM0MS1jYzJjZGJiNTNhZWMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4ftdDPAAACzUlEQVR42uycPWgUQRTH96JBBEVQAiJoJVgIYmMjKK5gYZfKxkMt/DoCAQvlJI2NspJCCAgpAloYECsrC8E2CGkEG0vBSgMagmI06vp/+k7WdXb27c5ErvgP/Mjd7Ntf5nNhHssleZ4nYBa8A6l+tyCxS3pvMqh8m/8un4yyVGNzvfeP6HjhQp0sdcUWAyyytCqmHOiTpb5/5Gq6S5bWtbZqHMqy2vHzzUxRVjsJI0mssp5dizLYUaY/yoKMtkWibdrgx0jnly1CibYgKaKIIooooogiiiiiiCKKKBpO0UZH3V5wAewHK+AJeAi+NclEnAWr4AN4ChbBD7AAtvnOuMUvB8AauAc2F+qPgGXwyCqaA6/BqCPworZsjyVbcxA8A2uOEZBx6mhM7ax9AVsr4gb1ny0iac1JsNsRdx58BM8ts7YDvAGvwDEwAsbATR2f69bBFvaBF/nfRZbDjH6+ahUl2pKj4DLogp1aN++TJQ2SKhvAA5VdCxGVZSdCRAPZGdAp1jPtQxFFFFFEEUUUUUQRRRRRRJGtdPLJ5Ab+9sGmlg7JYGQi+ooPo4ENWpWuLUXo2XvJaI2DHtjSUiI5k1kRLSrDk6w7Ba4EDLgkru7IrK14ElDWshy1a5fAZGDXZqRrw7XXpGuHwLnEnW61FEm93pebH4NdgQ0al66NRejZdhHd0kdBEvAYuc2MFkUUUUQRRRRRRBFFFFFEEUXxRNOKv9S8kZGB70rW5JUYl+S04pVZJIM6r6xKkut7NeVrXb2W1YmmNLDn6XJPY6aqRH2DpCzrl0VNJE5ZW8k/MklpzGM5LYC7LRf1BDjM3AhFFFFEEUUUUUQRRRRRFCiSs0m/sclx4pkon8UsmA92bUWVR842oqIsCxWZZdbB7LZNILhonECwyKb/+w/grFvXogx2lOmPsiCjbJEom7bVY8SVG5EH20uQNVlGPwUYAK2t2Gvphg5BAAAAAElFTkSuQmCC);	background-repeat: no-repeat;
+	border:0px;
+	border-radius: 0px 5px 5px 0px;
+}
+
+
+header{
+	padding-left: 33px;
+	background: #211f20;
+	padding-bottom: 12px;
+
+}
+
+footer h3{
+	margin: 0;
+
+}
+
+footer{
+	width: 100%;
+	background-color: #211f20;
+	text-align: center;
+	color: #fff;
+	font-family: monospace;
+
+}
+.wrapper{
+	padding-top:34%;
+}
+.product-category-wrapper{
+	display: block;
+	
+}
+.logo-mobile{
+	width: 50%;
+}
+
+
+
+.picture .picture-wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+}
+.price{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	text-align:center;
+	background: rgba(33, 33, 33, 0.68);
+	color: #fff;
+	font-size: 20px;
+	font-family: 'Anton', sans-serif;
+	text-transform: uppercase;
+	text-shadow: 2px 2px #676767;
+	}
+
+
+.equal .picture{
+	width: 50%;
+	padding: 0px;
+}
+.picture-wrapper img{
+	width: 100%;
+	height: 100%;
+}
+
+.equal{
+	display: flex;
+	flex-direction: row;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 15px;
+	padding-top: 0px;
+}
+
+.description{
+	color: black;
+	width: 50%;
+	font-size: 0.8em;
+	background: #fff;	
+	
+}
+
+.equal .description{
+	padding-left: 10px;
+}
+
+
+.buzz{
+	height: 150px;
+	overflow: scroll;
+}
+a.name{
+	text-decoration: none;
+	font-family: 'IM Fell DW Pica SC', serif;
+	border: 0px;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: black;
+}
+
+.buzz p {
+	font-size: 15px;
+	color: #665E5E;
+	margin: 0px;
+	font-family: 'Lato', sans-serif;
+	background: rgba(210, 210, 210, 0.28);
+	
+}
+
+h2{
+	border: 0px;
+	margin: auto;
+}
+
+
+
+
+
+h3{
+	text-align: center;
+	background-color: 
+}
+
+
+ul{
+	position: relative;
+    width: 100%;
+    right: 0px;
+    top: -14px;
+    padding: 0;
+    margin: 0;
+}
+
+
+			.nav li{
+				list-style: none;
+			}
+			
+			.nav li a {
+				background-color:#292728;
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+				
+			    font-size: 17px;
+			    box-sizing: border-box;
+			    font-family: 'Cardo', serif;
+			    text-transform: uppercase;
+			    text-align: center;
+			    padding-right: 20px;
+			}
+			
+			.nav li a:hover{
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+				top: initial;
+
+			}
+			
+			.nav li ul li a {
+				position:relative;
+				text-align: center;
+				border-bottom: 1px solid #949494; 
+				background-color: rgba(33, 31, 32, 0.93);
+			}
+			
+			
+
+@media screen and (min-width: 1200px) {
+	
+	.main-header{
+		padding: 0;
+		height: 40%;
+	}
+	
+
+
+	.mobile-header{
+	background-color: #211f20;
+	   position: fixed;
+	   display: flex;
+	   height: 14%;
+}
+
+	.product-category-wrapper{
+	padding-bottom: 10px;	
+}
+
+	.logo-desktop{
+		width: 40%;
+		margin:0px!important;
+		padding-top: 5%;
+
+	}
+	
+	.search input[type="text"]{
+	border-radius: 5px 0px 0px 5px;
+	border: 1px solid #DDDDDD;
+	padding: 5px;
+	width: 30%;
+	left:15px;
+	
+}
+
+	.search input[type="button"]{
+		background-color: rgba(116, 140, 127, 0.83);
+		color: #090202;
+	}
+
+	.buzz{
+		overflow:visible;
+		width: 560px;
+		height: 30%;
+	}
+
+	.equal .description{
+		display: flex;
+		background-color: #f0f0f0;
+		width:55%;
+		
+	}
+
+	.desc-wrapper h2{
+		margin: 0;
+	}
+	.wrapper{
+		padding-top: 8%;
+		margin-left: 0px;
+		background-color: #f0f0f0;
+	}
+	.search{
+		position: relative;
+		top: -30px;
+		left: 100px;
+		width: 85%;
+		margin: auto;
+	}
+
+	.buzz p {
+	font-size: 15px;
+	color: #090202;
+	margin: 0px;
+	font-family: 'Asar', serif;
+	background: #e8e8e8;
+	border-radius:10px;
+	text-align: justify;
+	text-indent: 5px;
+	padding: 10px;
+	
+	
+}
+
+h2 .director{
+	color: #090101;
+	bottom: 0px;
+}
+
+.menu{
+	background-color: #211f20;
+}
+
+ul{
+	display: flex;
+	width: 100%;
+
+
+}
+
+.row{
+	width: 100%;
+	display: flex;
+}
+
+.menu ul li{
+    position: relative;
+    font-family: 'Cardo', serif;
+    font-size: 16px;
+    text-align: center;
+    flex-grow: 1;
+    background-color: rgba(84, 84, 84, 0.16);
+    list-style: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+
+
+}
+
+.desktop-nav{
+	display: flex;
+	top: 15px;
+	right: 70px ;
+    position: relative;
+    padding-top: 3%;
+
+    
+
+}
+
+
+
+.menu ul li:hover{
+    text-decoration: none;
+    line-height: 39px;
+    background: #D2D2D2;
+    
+}
+
+
+.menu ul li a {
+    height: 43px;
+    line-height: 43px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    transition: all 1s;
+	
+}
+
+.desktop-nav ul{
+	display: flex;
+	width: 80%;
+	padding: 0;
+	margin: 0;
+
+}
+
+.menu ul li a:hover {
+  color: #000000;
+ 
+}
+
+
+a.active{
+	background-color: #A3A3A3;
+	border-radius: 10px;
+	color: #000000;
+}
+
+}
+
+@media screen and (min-width: 1400px)
+
+{
+	.mobile-header{
+		height: 13%;
+	}
+
+	.wrapper{
+		padding-top: 100px;
+	}
+
+	.desktop-nav{
+		padding-top: 2%;
+	}
+}
+
+@media screen and (min-width: 1600px){
+	
+	.logo-desktop{
+			position:relative;
+			top: -5px; 
+	}	
+
+	.mobile-header{
+		height: 15%;
+	}
+
+	.wrapper{
+		padding-top: 7%;
+	}
+
+	.desktop-nav{
+		padding-top: 2.5%;
+	}
+	
+}
+
+@media screen and (min-width: 1940px){
+			.mobile-header{
+				height: 17%;
+			}
+}
+
+
+@media screen and (min-width: 2200px){
+	.mobile-header{
+		height: 20%;
+	}
+}

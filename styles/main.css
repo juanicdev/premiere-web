@@ -58,7 +58,7 @@ footer{
 
 }
 .wrapper{
-	padding-top:34%;
+	padding-top:39%;
 }
 .product-category-wrapper{
 	display: block;
@@ -210,8 +210,39 @@ ul{
 				background-color: rgba(33, 31, 32, 0.93);
 			}
 			
+			.description .desc-wrapper .yt{
+				width: 96%;
+			}
 			
+@media screen and (max-width: 768px) and (min-width: 500px){
+ .logo-mobile{
+ 	width: 33%;
+ }
 
+ .wrapper{
+ 	padding-top: 23%;
+ }
+}
+@media screen and (min-width: 768px){
+	.logo-mobile{
+		width: 33%;
+	}
+
+	.wrapper{
+		padding-top: 23%;
+	}
+}
+
+@media screen and (min-width: 1000px){
+ 
+ .logo-mobile{
+ 	width: 25%;
+ }
+ .wrapper{
+ 	padding-top: 18%;
+ }
+
+}
 @media screen and (min-width: 1200px) {
 	
 	.main-header{
@@ -400,7 +431,7 @@ a.active{
 	}
 
 	.wrapper{
-		padding-top: 100px;
+		padding-top: 130px;
 	}
 
 	.desktop-nav{
